@@ -1,6 +1,6 @@
 # OneForAll
 A password Manager
 
-To execute
+Prerequisites To Execute
 
 pip install pillow

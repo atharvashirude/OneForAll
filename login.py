@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-import db.db
+import db
 import dashboard
 
 
@@ -32,7 +32,7 @@ class LoginWindow:
 
         x, y = 70, 20
 
-        self.img = PhotoImage(file='images/login.png')
+        self.img = PhotoImage(file='login.png')
         self.label = Label(self.frame, image=self.img)
         self.label.place(x = x + 80, y = y + 0)
 
@@ -73,7 +73,7 @@ class LoginWindow:
         elif self.password.get() == "":
             messagebox.showinfo("Alert!", "Enter Password first")
         else:
-            res = db.db.user_login(data)
+            res = db.user_login(data)
             if res:
                 messagebox.showinfo("Message", "Login Successfully")
                 self.win.destroy()
